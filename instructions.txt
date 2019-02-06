@@ -1,0 +1,29 @@
+?You can download the complete PHP script from here:
+?https://www.dropbox.com/s/rns0v3ch59jessk/playstoreDashboard.zip?dl=0
+?
+?And Database File from here:
+?https://www.dropbox.com/s/1no04kyezcatpi2/playstore.sql?dl=0
+
+
+1. Upload the zip file of script to your root or desired directory on webserver
+2. Unzip the file.
+3. Setup a database account, save its name, username, password credentials and update them in config.php file of script.
+4. Login to your phpmyadmin using recently created database credentials and Upload the .sql (Database) file in "Import" tab.
+5. Go to your Google Play Console > Settings > API Access and "Link" your Playstore Dashboard.
+6. Tap on "Create OAuthClient" and select your android developer project (or create "New" if you dont have one)
+7. Goto Google Developers Console by the link "View in Google Developers Console".
+8. Download the OAuth credentials file by clicking over download icon (on hovering it says Download JSON) and rename the file to "client_id.json"
+9. Copy the downloaded JSON file and paste it to root of your script which you unzipped in webserver (If it asks for overwrite, click Yes)
+10. Click "Credentials" in Google Developer Console.
+11. Click on Web Client or any available client in OAuth Client category
+12. Set following URIs as whitelisted Redirect URIs:
+
+http://{yourwebsite.domain}/editAPKs.php
+http://{yourwebsite.domain}/editAPKlistings.php
+http://{yourwebsite.domain}/editListings.php
+http://{yourwebsite.domain}/editImages.php
+
+10. Access the website (or with that directory) of your webserver from browser.
+11. Click on Authorize button and proceed with Google Sign In to authenticate for your app.
+12. You must have a package name already at Google Play, set it in the dashboard's first field and click "Update Package".
+13. You can now make any changes within those listed APIs to your Google Play Account. Remaining instructions for inputs where required, are mentioned below the fields.
